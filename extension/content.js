@@ -30,20 +30,26 @@
     collapsed: false,
     favorites: new Set(),
     tone: "Default", language: "English", style: "Default",
+    models: [], // real models detected from the page's model switcher
   };
+
+  const MODEL_KEY = "models_" + PLATFORM;
+  const MODEL_RE = /(gpt|o1|o3|o4|claude|sonnet|opus|haiku)/i;
+  const CLAUDE_FAMILY_RE = /(claude|sonnet|opus|haiku)/i;
 
   // ---------- persistence ----------
   function loadPrefs() {
     return new Promise((resolve) => {
       try {
         chrome.storage.local.get(
-          ["favorites", "tone", "language", "style", "collapsed"],
+          ["favorites", "tone", "language", "style", "collapsed", MODEL_KEY],
           (r) => {
             if (Array.isArray(r.favorites)) state.favorites = new Set(r.favorites);
             if (r.tone) state.tone = r.tone;
             if (r.language) state.language = r.language;
             if (r.style) state.style = r.style;
             if (typeof r.collapsed === "boolean") state.collapsed = r.collapsed;
+            if (Array.isArray(r[MODEL_KEY])) state.models = r[MODEL_KEY];
             resolve();
           }
         );
@@ -193,17 +199,89 @@
   function categories() {
     return ["All", ...Array.from(new Set(PROMPTS.map((p) => p.category))).sort()];
   }
+  // Read the model currently shown on the composer's model-switcher button.
+  function currentModelFromButton() {
+    const cands = document.querySelectorAll(
+      'button[aria-haspopup], [data-testid*="model" i], button[aria-label*="model" i]'
+    );
+    for (const b of cands) {
+      if (b.closest("#promptdeck-library, #promptdeck-bar")) continue;
+      const t = (b.textContent || "").trim().split("\n")[0].trim();
+      if (t && t.length <= 32 && MODEL_RE.test(t)) return t.replace(/\s+/g, " ");
+    }
+    return null;
+  }
+
+  // Persist and apply a detected model list.
+  function saveModels(list) {
+    const changed = JSON.stringify(list) !== JSON.stringify(state.models);
+    state.models = list;
+    try { chrome.storage.local.set({ [MODEL_KEY]: list }); } catch (e) {}
+    if (changed && !state.collapsed) render();
+  }
+
+  // Scrape an open model menu (ChatGPT / Claude) for the real, plan-accurate
+  // list of models. Runs opportunistically after clicks — no auto-clicking.
+  // Extract just the model name from a menu item, ignoring any description
+  // sub-label (e.g. "GPT-5.4" not "GPT-5.4 Leaving on July 23").
+  function itemLabel(it) {
+    for (const n of it.childNodes) {
+      if (n.nodeType === 3) {
+        const t = n.textContent.trim();
+        if (t && MODEL_RE.test(t)) return t.replace(/\s+/g, " ");
+      }
+    }
+    let best = null;
+    it.querySelectorAll("*").forEach((el) => {
+      if (el.children.length === 0) {
+        const t = (el.textContent || "").trim();
+        if (t && MODEL_RE.test(t) && (!best || t.length < best.length)) best = t;
+      }
+    });
+    if (best) return best.replace(/\s+/g, " ");
+    return (it.textContent || "").trim().split("\n")[0].trim();
+  }
+
+  function scanForModelMenu() {
+    const menus = document.querySelectorAll(
+      '[role="menu"],[role="listbox"],[data-radix-menu-content]'
+    );
+    for (const menu of menus) {
+      if (menu.closest("#promptdeck-library, #promptdeck-bar")) continue;
+      const items = menu.querySelectorAll(
+        '[role="menuitem"],[role="menuitemradio"],[role="option"],button,a,li'
+      );
+      const names = [];
+      items.forEach((it) => {
+        const t = itemLabel(it);
+        if (t && t.length <= 24 && MODEL_RE.test(t)) names.push(t);
+      });
+      const uniq = [...new Set(names)];
+      if (uniq.length >= 2) { saveModels(uniq); return uniq; }
+    }
+    return null;
+  }
+
   function modelList() {
-    const s = new Set();
-    PROMPTS.forEach((p) => (p.models || []).forEach((m) => s.add(m)));
-    return ["All", ...Array.from(s)];
+    if (state.models.length) return ["All", ...state.models];
+    const cur = currentModelFromButton();
+    return cur ? ["All", cur] : ["All"];
   }
   function filteredAll() {
     const q = state.query.trim().toLowerCase();
     let list = PROMPTS.filter((p) => {
       if (state.tab === "favorites" && !state.favorites.has(p.id)) return false;
       if (state.category !== "All" && p.category !== state.category) return false;
-      if (state.model !== "All" && !(p.models || []).includes(state.model)) return false;
+      if (state.model !== "All") {
+        // Match by model family, since prompts are tagged generically
+        // (GPT-4o / Claude / o3) rather than by exact chat model version.
+        const wantClaude = CLAUDE_FAMILY_RE.test(state.model);
+        const tags = (p.models || []).map((m) => m.toLowerCase());
+        const ok = wantClaude
+          ? tags.some((t) => CLAUDE_FAMILY_RE.test(t))
+          : tags.some((t) => !CLAUDE_FAMILY_RE.test(t));
+        if (!ok) return false;
+      }
       if (!q) return true;
       return [p.title, p.description, p.subcategory, (p.tags || []).join(" ")]
         .join(" ").toLowerCase().includes(q);
@@ -265,6 +343,10 @@
     const themeCls = dark ? "pd-dark" : "pd-light";
     const convo = inConversation();
 
+    // Drop a stale model selection if the detected list no longer has it.
+    if (state.model !== "All" && !modelList().includes(state.model))
+      state.model = "All";
+
     // Floating toggle (always available)
     fab.className = themeCls;
     fab.innerHTML = `<button class="pd-fab-btn" data-act="toggle">
@@ -322,7 +404,7 @@
         </div>
         <div class="pd-filters">
           <label>Topic<select data-f="category">${categories().map((c) => opt(c, state.category)).join("")}</select></label>
-          <label>Model<select data-f="model">${modelList().map((m) => opt(m, state.model)).join("")}</select></label>
+          <label>Model<select data-f="model">${modelList().map((m) => opt(m, state.model)).join("")}${modelList().length <= 1 ? '<option value="All" disabled>— open your model menu to sync —</option>' : ""}</select></label>
           <label>Sort by<select data-f="sort">
             ${opt("title", state.sort, "Title A–Z")}${opt("category", state.sort, "Category")}${opt("author", state.sort, "Author")}
           </select></label>
@@ -422,6 +504,17 @@
     await loadPrefs();
     await loadPrompts();
     render();
+
+    // Sync the real model list from the page's own model switcher. We never
+    // auto-open menus; we just read whatever menu the user opens (reflecting
+    // their exact plan — premium sees all models, free sees theirs).
+    scanForModelMenu();
+    document.addEventListener(
+      "click",
+      () => setTimeout(scanForModelMenu, 220),
+      true
+    );
+
     // ChatGPT/Claude are SPAs that re-render the main area and composer often.
     // Re-mount whenever our anchors go missing or the route changes.
     const obs = new MutationObserver(() => {
