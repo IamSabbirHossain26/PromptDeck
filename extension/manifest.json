@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "PromptDeck — Prompts for ChatGPT & Claude",
+  "version": "0.1.0",
+  "description": "One-click curated prompts injected right into ChatGPT and Claude. Your cheat code for AI.",
+  "action": {
+    "default_title": "PromptDeck",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://claude.ai/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["prompts.json"],
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*"
+      ]
+    }
+  ]
+}

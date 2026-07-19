@@ -1,0 +1,1439 @@
+[
+  {
+    "id": "seo-longform-article",
+    "title": "Human-Written SEO Long-Form Article",
+    "category": "SEO",
+    "subcategory": "Writing",
+    "author": "PromptDeck",
+    "description": "Writes a 100% unique, plagiarism-free, SEO-optimized long-form article with a proper H1–H3 outline, meta description, and FAQ section.",
+    "tags": [
+      "seo",
+      "article",
+      "blog",
+      "writing"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude",
+      "o3"
+    ],
+    "prompt": "You are an expert SEO copywriter and subject-matter expert. Write a comprehensive, 100% original, plagiarism-free article about: [TOPIC].\n\nRequirements:\n- Target primary keyword: [KEYWORD]\n- Search intent: [informational / commercial / transactional]\n- Word count: at least 1500 words\n- Reading level: 8th grade, conversational but authoritative\n\nStructure:\n1. An SEO title (max 60 chars) and a meta description (max 155 chars).\n2. A compelling H1.\n3. An intro that hooks the reader in the first 2 sentences and states what they'll learn.\n4. Logical H2/H3 sections with short paragraphs (2–4 sentences), bullet lists where useful.\n5. Naturally include the primary keyword in the H1, first paragraph, and 2–3 H2s. Avoid keyword stuffing.\n6. A 5-question FAQ section formatted for FAQ schema.\n7. A short conclusion with a clear call to action.\n\nWrite in [LANGUAGE], in a [TONE] tone. Do not mention that you are an AI. Output only the article."
+  },
+  {
+    "id": "yoast-seo-writer",
+    "title": "Yoast SEO Green-Light Writer",
+    "category": "SEO",
+    "subcategory": "Writing",
+    "author": "PromptDeck",
+    "description": "Produces an article engineered to pass Yoast SEO and readability checks — keyphrase density, transition words, short sentences, and subheading distribution.",
+    "tags": [
+      "seo",
+      "yoast",
+      "wordpress"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a WordPress SEO specialist optimizing for the Yoast SEO plugin. Write an article on [TOPIC] targeting the focus keyphrase \"[KEYWORD]\".\n\nHit every Yoast green bullet:\n- Keyphrase in SEO title, slug, meta description, first paragraph, one subheading, and image alt text suggestion.\n- Keyphrase density 0.5%–2.5%.\n- 30%+ of sentences use transition words.\n- Under 25% of sentences over 20 words.\n- No paragraph longer than 150 words; a subheading at least every 300 words.\n- Flesch reading ease above 60.\n\nDeliver: SEO title, slug, meta description, suggested featured-image alt text, then the full article with H2/H3 markup."
+  },
+  {
+    "id": "keyword-cluster-strategy",
+    "title": "Keyword Cluster & Content Plan",
+    "category": "SEO",
+    "subcategory": "Ideation",
+    "author": "PromptDeck",
+    "description": "Builds a topic-cluster keyword strategy from a single seed keyword: pillar page + supporting articles with intent and funnel stage.",
+    "tags": [
+      "seo",
+      "keywords",
+      "strategy",
+      "content-plan"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "You are a senior SEO strategist. From the seed keyword \"[KEYWORD]\" in the [INDUSTRY] niche, build a topic-cluster content plan.\n\nReturn a markdown table with columns: Cluster | Page Type (Pillar/Supporting) | Working Title | Target Keyword | Search Intent | Funnel Stage (TOFU/MOFU/BOFU) | Suggested Word Count.\n\nInclude 1 pillar page and 8–12 supporting articles that internally link to it. After the table, list 5 internal-linking recommendations and 3 low-competition long-tail keywords worth targeting first."
+  },
+  {
+    "id": "outrank-competitor",
+    "title": "Outrank a Competitor Article",
+    "category": "SEO",
+    "subcategory": "Writing",
+    "author": "PromptDeck",
+    "description": "Analyzes a competitor's ranking page and writes a superior, more complete article designed to outrank it.",
+    "tags": [
+      "seo",
+      "competitor",
+      "content"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as an SEO content strategist. I want to outrank this competitor page: [COMPETITOR URL], which targets \"[KEYWORD]\".\n\nStep 1: Infer the topics, subtopics, and questions that page likely covers.\nStep 2: Identify 5 content gaps or angles they probably miss.\nStep 3: Write a more comprehensive, better-structured article that covers everything they do PLUS the gaps, with a stronger intro and clearer takeaways.\n\nInclude an SEO title, meta description, and an outline before the full draft. Be genuinely more useful, not just longer."
+  },
+  {
+    "id": "cold-email-b2b",
+    "title": "High-Converting B2B Cold Email",
+    "category": "Copywriting",
+    "subcategory": "Email",
+    "author": "PromptDeck",
+    "description": "Writes a concise, personalized cold outreach email with a strong hook, one clear value prop, and a low-friction CTA.",
+    "tags": [
+      "copywriting",
+      "email",
+      "outreach",
+      "sales"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "You are a top B2B copywriter. Write a cold outreach email.\n\nContext:\n- My product/service: [WHAT YOU SELL]\n- Target recipient: [ROLE] at [COMPANY TYPE]\n- Their likely pain point: [PAIN POINT]\n- Desired action: [BOOK A CALL / REPLY / etc.]\n\nRules:\n- Under 120 words.\n- Personalized first line (give me a [PLACEHOLDER] to fill).\n- One clear value proposition, no feature dumping.\n- Conversational, no corporate jargon or 'I hope this email finds you well'.\n- End with a single, low-commitment CTA phrased as a question.\n\nAlso give me 3 alternative subject lines under 6 words each."
+  },
+  {
+    "id": "landing-page-copy",
+    "title": "Full Landing Page Copy Framework",
+    "category": "Copywriting",
+    "subcategory": "Web",
+    "author": "PromptDeck",
+    "description": "Generates complete conversion-focused landing page copy: hero, benefits, social proof, objection handling, and CTA sections.",
+    "tags": [
+      "copywriting",
+      "landing-page",
+      "conversion"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a direct-response conversion copywriter. Write full landing page copy for: [PRODUCT/SERVICE].\n\nAudience: [TARGET AUDIENCE]\nCore transformation/outcome: [DESIRED OUTCOME]\nPrimary objection: [MAIN OBJECTION]\n\nDeliver these sections with headers:\n1. Hero: headline (outcome-driven), subheadline, primary CTA button text.\n2. Problem/agitation (3 short bullets).\n3. Solution & how it works (3 steps).\n4. Benefits (not features) — 4 bullets.\n5. Social proof placeholder + 2 sample testimonial formats.\n6. Objection-handling FAQ (4 Qs).\n7. Final CTA section with urgency.\n\nTone: [TONE]. Keep it punchy and skimmable."
+  },
+  {
+    "id": "human-rewriter",
+    "title": "Human-Like Rewriter (Anti-AI-Detection)",
+    "category": "Copywriting",
+    "subcategory": "Writing",
+    "author": "PromptDeck",
+    "description": "Rewrites AI or robotic text to sound natural and human, with varied sentence rhythm and a conversational voice.",
+    "tags": [
+      "copywriting",
+      "rewrite",
+      "humanize"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Rewrite the text below so it reads as if written by a thoughtful human, not an AI.\n\nGuidelines:\n- Vary sentence length; mix short punchy sentences with longer ones (burstiness).\n- Use natural transitions, occasional contractions, and a clear point of view.\n- Remove filler, clichés, and repetitive phrasing.\n- Keep the original meaning, facts, and structure.\n- Match this tone: [TONE], and this reading level: [READING LEVEL].\n\nOutput only the rewritten text.\n\nTEXT:\n[PASTE TEXT HERE]"
+  },
+  {
+    "id": "youtube-script",
+    "title": "YouTube Video Script Creator",
+    "category": "Marketing",
+    "subcategory": "Social Media",
+    "author": "PromptDeck",
+    "description": "Creates a retention-optimized YouTube script with a hook, chaptered body, B-roll notes, and an end screen CTA.",
+    "tags": [
+      "marketing",
+      "youtube",
+      "video",
+      "script"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "You are a YouTube growth strategist and scriptwriter. Write a full script for a video titled/about: [VIDEO TOPIC].\n\nVideo length: [MINUTES] minutes. Audience: [AUDIENCE].\n\nDeliver:\n- 3 clickable title options and a thumbnail text idea.\n- A 10-second hook that creates an open loop.\n- A chaptered script (with timestamps) using retention tactics: pattern interrupts, callbacks, and mini-cliffhangers between sections.\n- [B-ROLL] and [ON-SCREEN TEXT] notes inline.\n- An end-screen CTA and a pinned-comment suggestion.\n\nSpoken, energetic tone. No filler."
+  },
+  {
+    "id": "content-calendar",
+    "title": "30-Day Social Content Calendar",
+    "category": "Marketing",
+    "subcategory": "Marketing",
+    "author": "PromptDeck",
+    "description": "Builds a full month of platform-specific social posts with hooks, formats, and CTAs organized in a table.",
+    "tags": [
+      "marketing",
+      "social",
+      "calendar"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a social media manager. Create a 30-day content calendar for [BRAND/NICHE] on [PLATFORM].\n\nGoal: [GROW FOLLOWERS / DRIVE SALES / etc.]\nBrand voice: [VOICE]\n\nReturn a markdown table: Day | Content Pillar | Post Format (Reel/Carousel/Text/etc.) | Hook | Caption Idea | CTA | Suggested Hashtags.\n\nRotate across 4 content pillars: educational, entertaining, promotional, and community. Front-load the strongest hooks. After the table, suggest 3 series/recurring formats to build consistency."
+  },
+  {
+    "id": "buyer-persona",
+    "title": "Detailed Buyer Persona Generator",
+    "category": "Marketing",
+    "subcategory": "Strategy",
+    "author": "PromptDeck",
+    "description": "Generates a rich, structured buyer persona with demographics, goals, pains, objections, and messaging angles.",
+    "tags": [
+      "marketing",
+      "persona",
+      "strategy"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Create a detailed buyer persona for a business that sells [PRODUCT/SERVICE] to [TARGET MARKET].\n\nOutput as a structured profile with these sections:\n- Name, age, role, and a one-line bio.\n- Demographics & firmographics.\n- Goals and motivations.\n- Pain points and frustrations.\n- Buying triggers and decision criteria.\n- Common objections (and how to counter each).\n- Preferred channels and content types.\n- 3 messaging angles that would resonate, with a sample one-liner for each.\n\nBase it on realistic assumptions and label anything speculative."
+  },
+  {
+    "id": "midjourney-prompt-gen",
+    "title": "Midjourney Prompt Generator",
+    "category": "Generative AI",
+    "subcategory": "Midjourney",
+    "author": "PromptDeck",
+    "description": "Outputs four richly detailed, ready-to-paste Midjourney prompts for any concept, with style, lighting, and parameter flags.",
+    "tags": [
+      "generative-ai",
+      "midjourney",
+      "image"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "You are a Midjourney prompt expert. For the concept \"[CONCEPT]\", output 4 distinct, ready-to-paste prompts.\n\nEach prompt must include, comma-separated: subject and action, environment/setting, art style or medium, lighting, color palette, mood, camera/lens or composition, and level of detail.\n\nEnd each with sensible parameters like --ar 16:9 --style raw --v 6. Vary the style across the 4 (e.g., photoreal, cinematic, illustrated, 3D render). Output only the 4 prompts, numbered."
+  },
+  {
+    "id": "book-outline",
+    "title": "Complete Book / Ebook Outline",
+    "category": "Copywriting",
+    "subcategory": "Writing",
+    "author": "PromptDeck",
+    "description": "Produces a full book structure — title options, chapter list, and per-chapter beats — ready to write chapter by chapter.",
+    "tags": [
+      "writing",
+      "book",
+      "ebook",
+      "outline"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a professional book editor. Create a complete outline for a [FICTION/NON-FICTION] book about [TOPIC/PREMISE] for [TARGET READER].\n\nDeliver:\n- 5 title options and a one-line premise/hook.\n- A logical chapter list (10–15 chapters) with a one-sentence purpose for each.\n- For the first 3 chapters, expand into 4–6 bullet beats each.\n- Suggested word count per chapter and total.\n\nAfter this, ask me which chapter to draft first."
+  },
+  {
+    "id": "email-sequence",
+    "title": "5-Email Welcome / Nurture Sequence",
+    "category": "Marketing",
+    "subcategory": "Email",
+    "author": "PromptDeck",
+    "description": "Writes a full automated email sequence that builds trust and moves a new subscriber toward a purchase.",
+    "tags": [
+      "marketing",
+      "email",
+      "automation",
+      "funnel"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a 5-email welcome sequence for new subscribers of [BUSINESS], who joined via [LEAD MAGNET/SIGNUP SOURCE].\n\nGoal: build trust and lead to [OFFER].\n\nFor each of the 5 emails provide: purpose, subject line (+1 alternative), preview text, and the body (under 200 words, one CTA). Sequence arc:\n1. Welcome + deliver value + set expectations.\n2. Story / relatability.\n3. Teach something useful (soft mention of offer).\n4. Social proof + overcome the main objection.\n5. Direct offer with a reason to act now.\n\nTone: [TONE]. Human and warm, not salesy."
+  },
+  {
+    "id": "product-description",
+    "title": "E-commerce Product Description",
+    "category": "Copywriting",
+    "subcategory": "E-commerce",
+    "author": "PromptDeck",
+    "description": "Writes a benefit-driven, SEO-aware product description with a scannable feature list and a persuasive CTA.",
+    "tags": [
+      "copywriting",
+      "ecommerce",
+      "product"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a persuasive e-commerce product description.\n\nProduct: [PRODUCT NAME]\nKey features: [FEATURE 1; FEATURE 2; FEATURE 3]\nTarget buyer: [BUYER]\nBrand voice: [VOICE]\nPrimary keyword: [KEYWORD]\n\nDeliver:\n- A benefit-led headline.\n- A 2–3 sentence hook that speaks to the buyer's desire.\n- A short paragraph translating features into benefits.\n- A scannable bulleted feature/spec list.\n- A closing line with a confident CTA.\n\nNaturally include the keyword. Keep it under 180 words."
+  },
+  {
+    "id": "linkedin-post",
+    "title": "Viral LinkedIn Post",
+    "category": "Marketing",
+    "subcategory": "Social Media",
+    "author": "PromptDeck",
+    "description": "Writes an engagement-optimized LinkedIn post with a scroll-stopping hook, whitespace formatting, and a discussion CTA.",
+    "tags": [
+      "marketing",
+      "linkedin",
+      "personal-brand"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a LinkedIn post for a [ROLE] about [TOPIC/IDEA].\n\nGoal: [BUILD AUTHORITY / GET LEADS / SPARK DISCUSSION].\n\nRules:\n- A 1-line hook that stops the scroll and creates curiosity.\n- Short lines and generous whitespace (mobile-friendly).\n- A story or concrete example, not generic advice.\n- One clear takeaway.\n- End with a question that invites comments.\n- No hashtags in the body; suggest 3 at the end.\n\nTone: [TONE], first-person, authentic. Avoid buzzwords and 'Agree?' endings."
+  },
+  {
+    "id": "explain-simply",
+    "title": "Explain Anything Simply (ELI5 → Expert)",
+    "category": "Productivity",
+    "subcategory": "Learning",
+    "author": "PromptDeck",
+    "description": "Explains any complex topic at three levels — beginner, intermediate, and expert — with an analogy and a quick check.",
+    "tags": [
+      "productivity",
+      "learning",
+      "education"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Explain the concept of [TOPIC] at three levels:\n\n1. ELI5 — as if to a curious 10-year-old, using one everyday analogy.\n2. Intermediate — for a smart adult new to the field, with the key mechanisms.\n3. Expert — precise, with the important nuances, edge cases, and common misconceptions.\n\nAfter the three levels, give me a 3-question self-check quiz (with answers hidden below a line) so I can test my understanding."
+  },
+  {
+    "id": "meeting-summarizer",
+    "title": "Meeting Notes → Action Items",
+    "category": "Productivity",
+    "subcategory": "Work",
+    "author": "PromptDeck",
+    "description": "Turns raw meeting notes or a transcript into a clean summary, decisions, and owner-assigned action items.",
+    "tags": [
+      "productivity",
+      "meetings",
+      "summary"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "You are an executive assistant. Convert the raw meeting notes/transcript below into a structured summary.\n\nOutput:\n1. TL;DR — 3 bullet summary.\n2. Key decisions made.\n3. Action items as a table: Task | Owner | Due Date | Priority.\n4. Open questions / unresolved items.\n5. Suggested agenda points for the next meeting.\n\nIf owners or dates aren't stated, mark them [TBD]. Be concise and neutral.\n\nNOTES:\n[PASTE NOTES/TRANSCRIPT]"
+  },
+  {
+    "id": "code-explainer",
+    "title": "Explain & Review This Code",
+    "category": "Productivity",
+    "subcategory": "Developer",
+    "author": "PromptDeck",
+    "description": "Explains a code snippet line-by-line and flags bugs, security issues, and improvements.",
+    "tags": [
+      "developer",
+      "code",
+      "review"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude",
+      "o3"
+    ],
+    "prompt": "Act as a senior software engineer. For the code below:\n\n1. Summarize what it does in 2–3 sentences.\n2. Walk through the key logic step by step in plain language.\n3. Flag any bugs, edge cases, or security concerns.\n4. Suggest concrete improvements (readability, performance, best practices) with short code examples.\n5. Rate overall quality out of 10 with a one-line justification.\n\nLanguage/context: [LANGUAGE / FRAMEWORK]\n\nCODE:\n[PASTE CODE]"
+  },
+  {
+    "id": "resume-tailor",
+    "title": "Tailor My Resume to a Job",
+    "category": "Productivity",
+    "subcategory": "Career",
+    "author": "PromptDeck",
+    "description": "Rewrites resume bullets to match a specific job description, optimized for ATS keywords and impact.",
+    "tags": [
+      "career",
+      "resume",
+      "job"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a professional resume writer and ATS expert. Tailor my resume to the job description.\n\nStep 1: Extract the top 10 keywords/skills the job emphasizes.\nStep 2: Rewrite my experience bullets to mirror that language, using the format 'Action verb + task + quantified result'. Keep everything truthful to my input.\nStep 3: Flag any gaps between my resume and the job, and suggest how to address them.\n\nJOB DESCRIPTION:\n[PASTE JOB DESCRIPTION]\n\nMY CURRENT RESUME / EXPERIENCE:\n[PASTE RESUME]"
+  },
+  {
+    "id": "blog-title-ideas",
+    "title": "Clickable Blog Title & Hook Ideas",
+    "category": "SEO",
+    "subcategory": "Ideation",
+    "author": "PromptDeck",
+    "description": "Generates 15 high-CTR, SEO-aware blog title variations plus intro hooks across proven headline formulas.",
+    "tags": [
+      "seo",
+      "titles",
+      "ideation"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Generate 15 blog post title ideas for the topic \"[TOPIC]\" targeting the keyword \"[KEYWORD]\".\n\nUse a mix of proven formulas: how-to, listicle, question, 'mistakes to avoid', 'ultimate guide', contrarian, and result-driven. Keep titles under 60 characters where possible and front-load the keyword when natural.\n\nPresent as a table: Title | Formula | Why it works.\n\nThen write 2 opening-hook variations for the single best title."
+  },
+  {
+    "id": "twitter-thread",
+    "title": "X / Twitter Thread Writer",
+    "category": "Marketing",
+    "subcategory": "Social Media",
+    "author": "PromptDeck",
+    "description": "Turns one idea into a tight, high-engagement thread with a strong hook tweet and a CTA close.",
+    "tags": [
+      "marketing",
+      "twitter",
+      "x",
+      "thread"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write an X/Twitter thread about [TOPIC/IDEA] for an audience of [AUDIENCE].\n\nRules:\n- Tweet 1 is a hook that promises a specific payoff and creates curiosity (no clickbait lies).\n- 6–10 tweets, each one self-contained and under 280 characters.\n- One idea per tweet, concrete and skimmable; use line breaks.\n- Include at least one example or mini-story.\n- Final tweet: a summary + a CTA (follow / bookmark / reply).\n\nTone: [TONE]. Number each tweet."
+  },
+  {
+    "id": "swot-analysis",
+    "title": "Business SWOT & Next Steps",
+    "category": "Productivity",
+    "subcategory": "Business",
+    "author": "PromptDeck",
+    "description": "Runs a structured SWOT analysis for a business or idea and turns it into prioritized, actionable next steps.",
+    "tags": [
+      "business",
+      "strategy",
+      "swot"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a management consultant. Perform a SWOT analysis for: [BUSINESS / IDEA / PRODUCT] operating in [MARKET].\n\nProvide 4–6 specific, non-generic points under each of Strengths, Weaknesses, Opportunities, Threats.\n\nThen synthesize:\n- 3 strategic priorities (leverage strengths against opportunities).\n- 2 risks to mitigate now.\n- A 30-60-90 day action list.\n\nBe concrete and reference the specifics I gave, not textbook filler."
+  },
+  {
+    "id": "faq-generator",
+    "title": "SEO FAQ Schema Generator",
+    "category": "SEO",
+    "subcategory": "Writing",
+    "author": "PromptDeck",
+    "description": "Generates a keyword-rich FAQ section answering real 'People Also Ask' style questions, ready for FAQ schema.",
+    "tags": [
+      "seo",
+      "faq",
+      "schema"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Generate an SEO FAQ section for a page about [TOPIC] targeting \"[KEYWORD]\".\n\nProduce 8 questions that real users search (People Also Ask style), mixing informational and commercial intent. Each answer: 2–4 sentences, directly useful, naturally including related keywords without stuffing.\n\nOutput twice:\n1. Human-readable Q&A.\n2. Valid FAQPage JSON-LD schema markup ready to paste into the page."
+  },
+  {
+    "id": "sales-discovery-questions",
+    "title": "SPIN Sales Discovery Questions",
+    "category": "Sales",
+    "subcategory": "Discovery",
+    "author": "PromptDeck",
+    "description": "Generates tailored Situation, Problem, Implication, and Need-payoff questions to run a consultative discovery call.",
+    "tags": [
+      "sales",
+      "discovery",
+      "spin",
+      "b2b"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a top enterprise sales coach. I sell [PRODUCT/SERVICE] to [BUYER ROLE] at [COMPANY TYPE]. Build a discovery-call question set using the SPIN framework.\n\nProvide 3–4 questions for each stage:\n- Situation (understand their current setup)\n- Problem (surface pain)\n- Implication (make the pain costly)\n- Need-payoff (let them articulate the value of solving it)\n\nMake questions specific to my product and buyer, open-ended, and non-leading. End with 2 questions to uncover budget and decision process without being pushy."
+  },
+  {
+    "id": "objection-handling",
+    "title": "Sales Objection Handling Scripts",
+    "category": "Sales",
+    "subcategory": "Closing",
+    "author": "PromptDeck",
+    "description": "Writes calm, empathetic responses to your most common sales objections using the feel-felt-found and reframe methods.",
+    "tags": [
+      "sales",
+      "objections",
+      "closing"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "You are a sales closer. For my offer [PRODUCT/SERVICE] priced at [PRICE], write response scripts for these objections: 'too expensive', 'need to think about it', 'we already use [competitor]', 'no budget right now', and 'send me some info'.\n\nFor each: acknowledge the concern, reframe it, and move toward a next step — without being pushy. Keep each response under 90 words and conversational. Add one clarifying question I can ask to keep the dialogue going."
+  },
+  {
+    "id": "sales-followup-sequence",
+    "title": "Post-Demo Follow-Up Sequence",
+    "category": "Sales",
+    "subcategory": "Email",
+    "author": "PromptDeck",
+    "description": "Creates a 4-touch follow-up sequence after a sales call or demo that adds value and drives to a decision.",
+    "tags": [
+      "sales",
+      "email",
+      "followup"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a 4-message follow-up sequence after a sales demo of [PRODUCT] to [PROSPECT ROLE]. The prospect showed interest in [KEY BENEFIT] but hasn't committed.\n\nEach message: subject line, under 120 words, one clear ask. Arc:\n1. Recap value + a relevant resource (same day).\n2. Address their likely hesitation (+3 days).\n3. Social proof / case study (+5 days).\n4. Polite break-up email with an easy yes (+10 days).\n\nTone: helpful, confident, never desperate."
+  },
+  {
+    "id": "support-reply-empathetic",
+    "title": "Empathetic Customer Support Reply",
+    "category": "Customer Support",
+    "subcategory": "Email",
+    "author": "PromptDeck",
+    "description": "Drafts a warm, on-brand support response that acknowledges the issue, solves it, and protects the relationship.",
+    "tags": [
+      "support",
+      "customer-service",
+      "email"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a senior customer support specialist for [COMPANY/PRODUCT]. Write a reply to this customer message.\n\nGoals: acknowledge their feelings, take ownership, give a clear solution or next step, and set an expectation for timing. Brand voice: [VOICE]. Keep it human, not robotic; no over-apologizing. If information is missing, ask one specific question.\n\nCUSTOMER MESSAGE:\n[PASTE MESSAGE]"
+  },
+  {
+    "id": "support-refund-denial",
+    "title": "Say No Kindly (Refund / Policy Reply)",
+    "category": "Customer Support",
+    "subcategory": "Email",
+    "author": "PromptDeck",
+    "description": "Writes a firm-but-kind reply that declines a request while preserving goodwill and offering an alternative.",
+    "tags": [
+      "support",
+      "policy",
+      "retention"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a customer support reply that declines this request while keeping the customer happy where possible.\n\nRequest to decline: [WHAT THEY WANT]\nWhy we can't: [POLICY/REASON]\nAlternative I can offer: [ALTERNATIVE, or 'none']\n\nStructure: empathize, explain the 'why' briefly and honestly, offer the alternative or a goodwill gesture, end on a warm note. Be clear and kind — no corporate wall of text. Under 130 words."
+  },
+  {
+    "id": "canned-macros",
+    "title": "Support Macro / Canned Response Set",
+    "category": "Customer Support",
+    "subcategory": "Operations",
+    "author": "PromptDeck",
+    "description": "Generates a reusable set of on-brand canned responses for your most common support tickets.",
+    "tags": [
+      "support",
+      "macros",
+      "operations"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Create 8 reusable support macros for [PRODUCT/SERVICE]. Cover: greeting/acknowledgement, password reset, billing question, refund request, bug report received, feature request received, how-to request, and closing/CSAT ask.\n\nEach macro: a short label, the message body (with [PLACEHOLDERS] for personalization), and brand voice [VOICE]. Keep them warm, clear, and skimmable. Output as a labeled list."
+  },
+  {
+    "id": "business-plan-lean",
+    "title": "One-Page Lean Business Plan",
+    "category": "Business",
+    "subcategory": "Strategy",
+    "author": "PromptDeck",
+    "description": "Turns a rough idea into a structured one-page lean plan: problem, solution, market, model, and go-to-market.",
+    "tags": [
+      "business",
+      "startup",
+      "plan"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a startup advisor. Turn my idea into a one-page lean business plan.\n\nIdea: [DESCRIBE IDEA]\nTarget customer: [WHO]\n\nSections (concise, bullet form):\n1. Problem (top 3).\n2. Solution & unique value proposition.\n3. Target market & size (with reasoning).\n4. Revenue model & pricing.\n5. Key channels (go-to-market).\n6. Main costs.\n7. Key risks & unfair advantage.\n8. First 3 milestones.\n\nBe specific and pressure-test my assumptions where they seem weak."
+  },
+  {
+    "id": "pricing-strategy",
+    "title": "Pricing Strategy & Tier Design",
+    "category": "Business",
+    "subcategory": "Strategy",
+    "author": "PromptDeck",
+    "description": "Designs value-based pricing tiers with clear differentiation, anchor pricing, and upsell logic.",
+    "tags": [
+      "business",
+      "pricing",
+      "saas"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a pricing strategist. Design a pricing structure for [PRODUCT/SERVICE] aimed at [TARGET CUSTOMER].\n\nDeliver:\n- 3 tiers (name, price, who it's for, included features, one clear reason to upgrade).\n- The single 'value metric' pricing should scale on and why.\n- An anchor/decoy recommendation.\n- 2 add-ons or upsells.\n- A one-line positioning for each tier.\n\nExplain the psychology behind the structure in 3 bullets. Assume the goal is [MAXIMIZE REVENUE / ADOPTION]."
+  },
+  {
+    "id": "meeting-agenda",
+    "title": "Sharp Meeting Agenda Builder",
+    "category": "Business",
+    "subcategory": "Operations",
+    "author": "PromptDeck",
+    "description": "Builds a tight, outcome-driven meeting agenda with time boxes, owners, and a decision list.",
+    "tags": [
+      "business",
+      "meetings",
+      "productivity"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Create a focused agenda for a [DURATION] meeting about [TOPIC] with [ATTENDEES/ROLES].\n\nDesired outcomes: [WHAT SUCCESS LOOKS LIKE].\n\nOutput: a stated objective, a time-boxed agenda table (Item | Owner | Minutes | Desired outcome), a list of decisions to be made, pre-reads to send, and a 2-line follow-up template. Keep it ruthlessly focused — cut anything that isn't a decision or a discussion that needs the group."
+  },
+  {
+    "id": "sql-query-helper",
+    "title": "Write & Explain a SQL Query",
+    "category": "Developer",
+    "subcategory": "Database",
+    "author": "PromptDeck",
+    "description": "Writes an optimized SQL query from a plain-English request and explains it, with index suggestions.",
+    "tags": [
+      "developer",
+      "sql",
+      "database"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude",
+      "o3"
+    ],
+    "prompt": "Act as a senior data engineer. Write a SQL query for this request: [DESCRIBE WHAT YOU WANT].\n\nDatabase: [POSTGRES / MYSQL / etc.]\nRelevant tables & columns: [SCHEMA]\n\nDeliver:\n1. The query, clean and formatted.\n2. A plain-English explanation of what it does.\n3. Performance notes and any index that would help.\n4. One alternative approach if it exists.\n\nUse CTEs for readability. Point out any assumptions you made about the schema."
+  },
+  {
+    "id": "regex-builder",
+    "title": "Regex Builder & Explainer",
+    "category": "Developer",
+    "subcategory": "Utilities",
+    "author": "PromptDeck",
+    "description": "Builds a tested regular expression from a description and explains each part, with edge cases.",
+    "tags": [
+      "developer",
+      "regex",
+      "utility"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Create a regular expression that matches: [DESCRIBE THE PATTERN, with examples of what SHOULD and should NOT match].\n\nTarget language/flavor: [JS / PYTHON / PCRE].\n\nDeliver:\n1. The regex.\n2. A breakdown of each token in plain English.\n3. 3 matching and 3 non-matching test strings.\n4. A note on any edge cases or catastrophic-backtracking risk.\n\nKeep it as simple as possible while still correct."
+  },
+  {
+    "id": "unit-tests",
+    "title": "Generate Unit Tests for This Code",
+    "category": "Developer",
+    "subcategory": "Testing",
+    "author": "PromptDeck",
+    "description": "Writes a thorough unit-test suite covering happy paths, edge cases, and error handling for a function.",
+    "tags": [
+      "developer",
+      "testing",
+      "code"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude",
+      "o3"
+    ],
+    "prompt": "Act as a test engineer. Write unit tests for the code below.\n\nLanguage/framework: [LANGUAGE / TEST FRAMEWORK, e.g. Jest, Pytest]\n\nCover: happy path, edge cases, invalid inputs, and error handling. Use clear test names that describe behavior. Include setup/teardown if needed and mock external dependencies. After the tests, list any behaviors that are ambiguous and should be clarified.\n\nCODE:\n[PASTE CODE]"
+  },
+  {
+    "id": "commit-pr-writer",
+    "title": "Commit Message & PR Description Writer",
+    "category": "Developer",
+    "subcategory": "Workflow",
+    "author": "PromptDeck",
+    "description": "Turns a diff or change summary into a clean conventional-commit message and a reviewer-friendly PR description.",
+    "tags": [
+      "developer",
+      "git",
+      "workflow"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Based on the change summary or diff below, write:\n1. A Conventional Commits message (type(scope): subject, plus a short body of what & why).\n2. A pull-request description with: Summary, What changed, Why, How to test, and a checklist.\n\nKeep the commit subject under 72 chars, imperative mood. Make the PR skimmable for a busy reviewer.\n\nCHANGES:\n[PASTE DIFF OR SUMMARY]"
+  },
+  {
+    "id": "debug-helper",
+    "title": "Debug This Error",
+    "category": "Developer",
+    "subcategory": "Debugging",
+    "author": "PromptDeck",
+    "description": "Diagnoses an error message with the most likely causes ranked, plus concrete fixes to try.",
+    "tags": [
+      "developer",
+      "debugging",
+      "errors"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude",
+      "o3"
+    ],
+    "prompt": "Act as a senior engineer debugging an issue. Here is the error and context.\n\nError message / stack trace:\n[PASTE ERROR]\n\nWhat I was doing: [CONTEXT]\nEnvironment: [LANGUAGE / FRAMEWORK / VERSION]\nRelevant code:\n[PASTE CODE]\n\nGive me: the 3 most likely root causes (ranked, with why), the fastest way to confirm each, and a concrete fix for the most likely one. Then suggest how to prevent this class of bug in future."
+  },
+  {
+    "id": "lesson-plan",
+    "title": "Complete Lesson Plan Generator",
+    "category": "Education",
+    "subcategory": "Teaching",
+    "author": "PromptDeck",
+    "description": "Builds a structured lesson plan with objectives, activities, timing, and assessment for any topic and level.",
+    "tags": [
+      "education",
+      "teaching",
+      "lesson-plan"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as an experienced teacher. Create a lesson plan on [TOPIC] for [GRADE/LEVEL], lasting [DURATION].\n\nInclude:\n- 3 measurable learning objectives.\n- A hook/warm-up.\n- A time-boxed sequence of activities (with what the teacher and students do).\n- One group activity and one individual task.\n- Differentiation for struggling and advanced learners.\n- A quick formative assessment and an exit ticket.\n- Required materials.\n\nAlign to [CURRICULUM/STANDARD if any]. Keep it practical."
+  },
+  {
+    "id": "study-quiz",
+    "title": "Active-Recall Study Quiz",
+    "category": "Education",
+    "subcategory": "Learning",
+    "author": "PromptDeck",
+    "description": "Turns notes or a topic into a spaced, active-recall quiz with mixed question types and answer explanations.",
+    "tags": [
+      "education",
+      "study",
+      "quiz"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Create an active-recall study quiz on [TOPIC / paste notes below] for [LEVEL].\n\nProduce 12 questions mixing: 5 multiple-choice, 4 short-answer, 3 'explain why'. Order from easy to hard. Put all answers with brief explanations below a divider so I can test myself first. End with the 3 concepts I should review again based on common mistakes.\n\nNOTES/TOPIC:\n[PASTE HERE]"
+  },
+  {
+    "id": "study-plan",
+    "title": "Personalized Study / Learning Plan",
+    "category": "Education",
+    "subcategory": "Learning",
+    "author": "PromptDeck",
+    "description": "Designs a realistic week-by-week learning roadmap for a skill, with resources and milestones.",
+    "tags": [
+      "education",
+      "roadmap",
+      "self-learning"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a learning coach. Build a study plan for me to learn [SKILL/SUBJECT] from [CURRENT LEVEL] to [GOAL LEVEL] in [TIMEFRAME], studying about [HOURS] per week.\n\nDeliver a week-by-week roadmap with: focus topic, concrete outcomes, suggested free/paid resource types, a small project to apply it, and a checkpoint to assess progress. Front-load fundamentals. End with the 3 mistakes beginners make in this area and how to avoid them."
+  },
+  {
+    "id": "cover-letter",
+    "title": "Tailored Cover Letter",
+    "category": "Career",
+    "subcategory": "Job Search",
+    "author": "PromptDeck",
+    "description": "Writes a concise, specific cover letter matched to a job description and your background.",
+    "tags": [
+      "career",
+      "cover-letter",
+      "job"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a cover letter for the job below, using my background.\n\nJob description:\n[PASTE JOB DESCRIPTION]\n\nMy background / resume highlights:\n[PASTE HIGHLIGHTS]\n\nRules: under 250 words, 3 short paragraphs. Open with a specific hook (not 'I am writing to apply'). Connect 2–3 of my achievements directly to their needs, with a metric where possible. Match their tone. End with a confident, low-pressure close. No clichés or filler."
+  },
+  {
+    "id": "interview-prep",
+    "title": "Mock Interview & Answer Coach",
+    "category": "Career",
+    "subcategory": "Interview",
+    "author": "PromptDeck",
+    "description": "Runs a role-specific mock interview and coaches your answers using the STAR method.",
+    "tags": [
+      "career",
+      "interview",
+      "star"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a hiring manager interviewing me for a [ROLE] position. Ask me one question at a time — a mix of behavioral and role-specific. After each of my answers, give brief feedback: what was strong, what to improve, and a tighter STAR-structured version.\n\nStart with 8 likely questions for this role listed up front, then begin the mock interview with question 1. Keep feedback specific and actionable.\n\nJob context: [PASTE JD OR ROLE DETAILS]"
+  },
+  {
+    "id": "linkedin-profile",
+    "title": "LinkedIn Headline & About Rewrite",
+    "category": "Career",
+    "subcategory": "Personal Brand",
+    "author": "PromptDeck",
+    "description": "Rewrites your LinkedIn headline and About section to be keyword-rich, credible, and magnetic to recruiters.",
+    "tags": [
+      "career",
+      "linkedin",
+      "branding"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Rewrite my LinkedIn headline and About section.\n\nMy role/goal: [ROLE OR WHAT I WANT TO BE HIRED FOR]\nKey achievements: [LIST]\nTarget audience: [RECRUITERS / CLIENTS / etc.]\n\nDeliver:\n- 3 headline options (keyword-rich, under 220 chars, value-led).\n- An About section in first person: a hook, what I do and for whom, proof (metrics), and a soft CTA. Skimmable with short paragraphs and 3–4 keywords recruiters search. Confident, not braggy."
+  },
+  {
+    "id": "brand-voice-guide",
+    "title": "Brand Voice & Messaging Guide",
+    "category": "Marketing",
+    "subcategory": "Branding",
+    "author": "PromptDeck",
+    "description": "Defines a brand's voice, tone, vocabulary, and do/don't rules so all content stays consistent.",
+    "tags": [
+      "marketing",
+      "branding",
+      "voice"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Create a brand voice guide for [BRAND], which sells [WHAT] to [AUDIENCE] and wants to feel [3 ADJECTIVES].\n\nDeliver:\n- 3 core voice traits, each with a one-line definition and a 'we sound like / we don't sound like' pair.\n- Tone shifts by context (sales page vs. support vs. social).\n- Vocabulary: words we use and words we avoid.\n- 2 sample paragraphs (same message) showing the voice in action.\n- A quick 5-point checklist writers can use before publishing."
+  },
+  {
+    "id": "ad-copy-variations",
+    "title": "Ad Copy Variations (Meta / Google)",
+    "category": "Marketing",
+    "subcategory": "Ads",
+    "author": "PromptDeck",
+    "description": "Produces multiple ad-copy variations with different angles for A/B testing across paid channels.",
+    "tags": [
+      "marketing",
+      "ads",
+      "ppc"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write ad copy for [PRODUCT/SERVICE] targeting [AUDIENCE] with the goal of [CONVERSIONS / CLICKS / LEADS].\n\nPlatform: [META / GOOGLE / etc.]\nKey benefit: [BENEFIT]  |  Offer: [OFFER]\n\nDeliver 5 variations, each with a different angle (pain, desire, social proof, curiosity, urgency). For each: a primary text (under 125 chars where relevant), a headline (under 40 chars), and a description. Add 3 CTA button suggestions. Note which angle to test first and why."
+  },
+  {
+    "id": "press-release",
+    "title": "Professional Press Release",
+    "category": "Marketing",
+    "subcategory": "PR",
+    "author": "PromptDeck",
+    "description": "Writes a newsworthy, properly formatted press release with headline, dateline, quotes, and boilerplate.",
+    "tags": [
+      "marketing",
+      "pr",
+      "press-release"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a press release announcing: [WHAT'S HAPPENING].\n\nCompany: [COMPANY]  |  Location: [CITY]  |  Date: [DATE]\nKey facts: [FACTS]\nWhy it matters: [ANGLE]\n\nFollow standard format: compelling headline + subhead, dateline, a strong lead paragraph answering who/what/when/where/why, supporting details, 1–2 realistic quotes (label who says them), a boilerplate 'About' paragraph, and a media contact placeholder. Keep it factual and news-style, not salesy. End with ###."
+  },
+  {
+    "id": "newsletter-issue",
+    "title": "Email Newsletter Issue",
+    "category": "Marketing",
+    "subcategory": "Email",
+    "author": "PromptDeck",
+    "description": "Drafts a complete, engaging newsletter issue with a hook, curated sections, and a single CTA.",
+    "tags": [
+      "marketing",
+      "newsletter",
+      "email"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a newsletter issue for [BRAND/NEWSLETTER], audience [WHO], about [THEME/TOPIC].\n\nDeliver: 3 subject line options + preview text, a personal-feeling intro hook, 2–3 short value sections (with subheads), one curated 'worth checking out' item placeholder, and a single clear CTA at the end. Voice: [VOICE]. Keep paragraphs short and skimmable, around 400–600 words total. No fluff."
+  },
+  {
+    "id": "instagram-carousel",
+    "title": "Instagram Carousel Script",
+    "category": "Marketing",
+    "subcategory": "Social Media",
+    "author": "PromptDeck",
+    "description": "Writes a slide-by-slide Instagram/LinkedIn carousel with a scroll-stopping cover and a save-worthy payoff.",
+    "tags": [
+      "marketing",
+      "instagram",
+      "carousel"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Create a [7–10] slide carousel for [PLATFORM] on the topic [TOPIC] for [AUDIENCE].\n\nFor each slide give: the on-slide text (short — max 2 lines) and a tiny design note.\nStructure: Slide 1 = a bold hook/promise. Middle slides = one idea each, concrete and useful. Second-to-last = quick recap. Last = CTA (follow/save/comment).\n\nThen write the post caption (hook + context + CTA) and suggest 5 hashtags. Make it genuinely save-worthy, not generic."
+  },
+  {
+    "id": "video-hook-ideas",
+    "title": "Short-Form Video Hooks (Reels/TikTok)",
+    "category": "Marketing",
+    "subcategory": "Social Media",
+    "author": "PromptDeck",
+    "description": "Generates scroll-stopping first-3-second hooks and a simple script skeleton for short-form video.",
+    "tags": [
+      "marketing",
+      "tiktok",
+      "reels",
+      "video"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Give me 15 scroll-stopping hooks for a short-form video about [TOPIC] aimed at [AUDIENCE]. Mix formats: bold claim, question, mistake, 'stop doing X', curiosity gap, and result tease. Each under 12 words.\n\nThen pick the best hook and write a 20–35 second script skeleton: hook → 3 quick value beats → payoff → CTA, with [B-ROLL] and [ON-SCREEN TEXT] notes. Punchy, spoken tone."
+  },
+  {
+    "id": "value-prop-canvas",
+    "title": "Value Proposition Statement",
+    "category": "Business",
+    "subcategory": "Positioning",
+    "author": "PromptDeck",
+    "description": "Crafts a crisp, differentiated value proposition and several tagline options from your product details.",
+    "tags": [
+      "business",
+      "positioning",
+      "messaging"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Craft a value proposition for [PRODUCT/SERVICE].\n\nAudience: [WHO]  |  Main pain: [PAIN]  |  Key benefit: [BENEFIT]  |  Differentiator: [WHAT MAKES YOU DIFFERENT]\n\nDeliver:\n- One clear value proposition (1–2 sentences, outcome-focused, jargon-free).\n- The '[For X who Y, we do Z, unlike W]' positioning statement.\n- 5 short tagline options.\n- A one-line elevator pitch.\n\nAvoid buzzwords. Make the differentiation obvious."
+  },
+  {
+    "id": "user-story-writer",
+    "title": "Agile User Stories & Acceptance Criteria",
+    "category": "Business",
+    "subcategory": "Product",
+    "author": "PromptDeck",
+    "description": "Turns a feature idea into well-formed user stories with acceptance criteria and edge cases.",
+    "tags": [
+      "product",
+      "agile",
+      "user-stories"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as a product manager. For the feature '[FEATURE]' in [PRODUCT], write user stories.\n\nProvide 3–5 stories in the format: 'As a [user], I want [goal] so that [benefit].' For each, add acceptance criteria in Given/When/Then form and note edge cases to handle. Then list 2 out-of-scope items and any open questions for the team. Keep stories small and independently shippable."
+  },
+  {
+    "id": "swot-competitor-matrix",
+    "title": "Competitor Comparison Matrix",
+    "category": "Business",
+    "subcategory": "Strategy",
+    "author": "PromptDeck",
+    "description": "Builds a structured comparison of your product against competitors across the dimensions buyers care about.",
+    "tags": [
+      "business",
+      "competitor",
+      "strategy"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Create a competitor comparison for [MY PRODUCT] vs [COMPETITOR 1], [COMPETITOR 2], [COMPETITOR 3].\n\nStep 1: Infer the 6–8 dimensions buyers in [MARKET] actually compare on (price, features, support, ease, etc.).\nStep 2: Build a markdown table scoring each player on those dimensions (use High/Med/Low or short notes; mark anything speculative).\nStep 3: Summarize where I win, where I'm weak, and 3 positioning angles that lean into my strengths.\n\nBe honest, not just flattering to my product."
+  },
+  {
+    "id": "personal-budget",
+    "title": "Personal Budget & Savings Plan",
+    "category": "Personal",
+    "subcategory": "Finance",
+    "author": "PromptDeck",
+    "description": "Builds a simple monthly budget and savings plan from your income and goals (general guidance, not financial advice).",
+    "tags": [
+      "personal",
+      "budget",
+      "finance"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Help me build a simple monthly budget. This is general educational guidance, not professional financial advice.\n\nMonthly income (after tax): [AMOUNT]\nFixed costs: [RENT, BILLS, etc.]\nGoals: [SAVE FOR X / PAY OFF DEBT / etc.]\n\nDeliver: a suggested budget using a clear framework (e.g. 50/30/20) adapted to my numbers, a realistic monthly savings target, 3 categories where I could likely cut back, and a simple order of priorities (emergency fund, high-interest debt, etc.). Present the budget as a table."
+  },
+  {
+    "id": "meal-plan",
+    "title": "Weekly Meal Plan & Grocery List",
+    "category": "Personal",
+    "subcategory": "Health",
+    "author": "PromptDeck",
+    "description": "Creates a balanced weekly meal plan tailored to your goals and diet, with a consolidated grocery list.",
+    "tags": [
+      "personal",
+      "health",
+      "meal-plan"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Create a 7-day meal plan for me. This is general wellness guidance, not medical or dietary advice.\n\nGoal: [WEIGHT LOSS / MUSCLE / MAINTENANCE]\nDiet preferences/restrictions: [VEGETARIAN / ALLERGIES / etc.]\nRough daily calories or servings: [IF KNOWN]\nCooking time available: [MINUTES]\n\nDeliver: breakfast, lunch, dinner, and a snack for each day (simple, repeatable meals), then a consolidated grocery list grouped by aisle. Keep ingredients affordable and overlap them across days to reduce waste. Flag that anyone with medical conditions should consult a professional."
+  },
+  {
+    "id": "workout-plan",
+    "title": "Beginner-Friendly Workout Plan",
+    "category": "Personal",
+    "subcategory": "Fitness",
+    "author": "PromptDeck",
+    "description": "Designs a weekly workout routine matched to your goal, level, and available equipment (general fitness guidance).",
+    "tags": [
+      "personal",
+      "fitness",
+      "workout"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Design a weekly workout plan. This is general fitness guidance, not medical advice — I'll consult a professional before starting.\n\nGoal: [STRENGTH / FAT LOSS / GENERAL FITNESS]\nLevel: [BEGINNER / INTERMEDIATE]\nDays per week: [N]  |  Equipment: [HOME / GYM / NONE]  |  Time per session: [MINUTES]\n\nDeliver: a day-by-day split, exercises with sets/reps and rest, a warm-up and cool-down, and how to progress each week. Include form cues for the main lifts and swap options for anyone with limited mobility."
+  },
+  {
+    "id": "email-reply-drafter",
+    "title": "Professional Email Reply Drafter",
+    "category": "Productivity",
+    "subcategory": "Communication",
+    "author": "PromptDeck",
+    "description": "Drafts a clear, appropriately-toned reply to any email in seconds, with options for different intents.",
+    "tags": [
+      "productivity",
+      "email",
+      "communication"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Draft a reply to the email below.\n\nMy intent: [AGREE / DECLINE / NEGOTIATE / ASK FOR INFO / etc.]\nKey points I want to make: [BULLETS]\nTone: [FRIENDLY / FORMAL / FIRM]\n\nKeep it clear and concise, lead with the main point, and end with a clear next step. Give me a short version and a slightly warmer longer version.\n\nEMAIL:\n[PASTE EMAIL]"
+  },
+  {
+    "id": "decision-matrix",
+    "title": "Decision-Making Framework",
+    "category": "Productivity",
+    "subcategory": "Thinking",
+    "author": "PromptDeck",
+    "description": "Structures a tough decision with weighted criteria, pros/cons, and a clear recommendation.",
+    "tags": [
+      "productivity",
+      "decision",
+      "thinking"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Help me make a decision. I'm choosing between: [OPTION A], [OPTION B], (and [OPTION C]).\n\nGoal / what matters most: [CONTEXT & PRIORITIES].\n\nDo this:\n1. Propose 5–6 weighted criteria based on my priorities.\n2. Score each option against them in a table.\n3. Give the strongest argument for each option.\n4. Surface any risk or bias I might be overlooking.\n5. Give a clear recommendation and the one thing that would change it.\n\nBe direct — don't sit on the fence."
+  },
+  {
+    "id": "summarize-long-text",
+    "title": "Summarize & Extract Key Points",
+    "category": "Productivity",
+    "subcategory": "Research",
+    "author": "PromptDeck",
+    "description": "Condenses a long document into a layered summary: TL;DR, key points, and action items.",
+    "tags": [
+      "productivity",
+      "summary",
+      "research"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Summarize the text below for a busy reader.\n\nOutput layers:\n1. TL;DR in one sentence.\n2. 5 key points as bullets.\n3. Any decisions, numbers, or deadlines mentioned.\n4. Action items or open questions (if any).\n5. One-line 'so what' — why this matters.\n\nBe faithful to the source, neutral, and don't add information that isn't there.\n\nTEXT:\n[PASTE TEXT]"
+  },
+  {
+    "id": "translate-localize",
+    "title": "Translate & Localize (Not Just Literal)",
+    "category": "Productivity",
+    "subcategory": "Language",
+    "author": "PromptDeck",
+    "description": "Translates text into another language while adapting tone, idioms, and cultural nuance for a natural result.",
+    "tags": [
+      "productivity",
+      "translation",
+      "localization"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Translate the text below from [SOURCE LANGUAGE] to [TARGET LANGUAGE].\n\nContext/purpose: [MARKETING / LEGAL / CASUAL / etc.]\nAudience: [WHO]\n\nDon't translate word-for-word — localize it so it reads naturally to a native speaker, adapting idioms, tone, and formality. Keep the meaning and intent. If a phrase has no clean equivalent, give the best option and a short note. Preserve any [PLACEHOLDERS] and formatting.\n\nTEXT:\n[PASTE TEXT]"
+  },
+  {
+    "id": "design-brief",
+    "title": "Creative / Design Brief Generator",
+    "category": "Design",
+    "subcategory": "Creative",
+    "author": "PromptDeck",
+    "description": "Produces a clear design brief so a designer (or AI tool) knows exactly what to create and why.",
+    "tags": [
+      "design",
+      "brief",
+      "creative"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a design brief for [WHAT NEEDS DESIGNING, e.g. a logo, landing page, ad set].\n\nProject context: [BRAND, PRODUCT, GOAL]\nAudience: [WHO]  |  Desired feeling: [ADJECTIVES]\n\nInclude: objective, audience, key message, deliverables & specs, mandatory elements (logo, colors, etc.), tone/style references to look for, what to avoid, timeline placeholder, and how success will be judged. Keep it clear enough that a designer could start without a meeting."
+  },
+  {
+    "id": "color-palette",
+    "title": "Brand Color Palette & Rationale",
+    "category": "Design",
+    "subcategory": "Branding",
+    "author": "PromptDeck",
+    "description": "Suggests a cohesive brand color palette with hex codes, usage roles, and the psychology behind each choice.",
+    "tags": [
+      "design",
+      "color",
+      "branding"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Suggest a color palette for [BRAND], which sells [WHAT] and wants to feel [ADJECTIVES] to [AUDIENCE].\n\nDeliver:\n- A primary, secondary, and 2 accent colors with hex codes.\n- Neutral/background and text colors with hex codes.\n- The role and 'when to use' for each.\n- A one-line rationale (color psychology) per color.\n- A note on contrast/accessibility (WCAG) for text pairings.\n\nKeep it cohesive and modern; avoid clashing hues."
+  },
+  {
+    "id": "ux-microcopy",
+    "title": "UX Microcopy & Empty States",
+    "category": "Design",
+    "subcategory": "UX Writing",
+    "author": "PromptDeck",
+    "description": "Writes clear, on-brand microcopy for buttons, errors, empty states, and tooltips.",
+    "tags": [
+      "design",
+      "ux-writing",
+      "microcopy"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write UX microcopy for [FEATURE/SCREEN] in [PRODUCT]. Brand voice: [VOICE].\n\nProvide copy for: primary button, secondary/cancel button, a success message, an error message (helpful, not blaming), an empty state (with a nudge to act), and a tooltip. Keep everything concise, human, and action-oriented. Give 2 options for the button and empty-state so I can pick. Avoid jargon and dead-ends."
+  },
+  {
+    "id": "podcast-outline",
+    "title": "Podcast Episode Outline & Questions",
+    "category": "Marketing",
+    "subcategory": "Content",
+    "author": "PromptDeck",
+    "description": "Plans a podcast episode with a hook, segment flow, and sharp interview questions.",
+    "tags": [
+      "marketing",
+      "podcast",
+      "content"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Plan a podcast episode about [TOPIC] for [AUDIENCE]. Format: [SOLO / INTERVIEW with GUEST ROLE].\n\nDeliver:\n- 3 episode title options and a 2-sentence hook/description.\n- A segment-by-segment outline with rough timings.\n- If interview: 10 questions that go beyond the obvious, ordered to build a narrative, plus 3 follow-up prompts.\n- 3 quotable talking points to tease on social.\n- A closing CTA.\n\nMake it conversational, not a lecture."
+  },
+  {
+    "id": "case-study-writer",
+    "title": "Customer Case Study / Success Story",
+    "category": "Marketing",
+    "subcategory": "Content",
+    "author": "PromptDeck",
+    "description": "Turns raw results into a persuasive challenge-solution-results case study with a pull quote.",
+    "tags": [
+      "marketing",
+      "case-study",
+      "content"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a customer case study.\n\nCustomer: [NAME/INDUSTRY]\nTheir challenge: [PROBLEM]\nWhat they used our product for: [USE]\nResults: [METRICS/OUTCOMES]\n\nStructure: a results-led headline, a short intro on the customer, the Challenge, the Solution (how they used us), the Results (with the metrics highlighted), and a realistic pull-quote. Keep it credible and specific — story first, sales second. End with a soft CTA. Around 400–500 words."
+  },
+  {
+    "id": "faq-from-product",
+    "title": "Generate a Help-Center FAQ",
+    "category": "Customer Support",
+    "subcategory": "Content",
+    "author": "PromptDeck",
+    "description": "Creates a thorough, well-organized FAQ for your product or service that deflects common tickets.",
+    "tags": [
+      "support",
+      "faq",
+      "help-center"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Create a help-center FAQ for [PRODUCT/SERVICE].\n\nKey details: [WHAT IT DOES, PRICING, PLATFORMS, POLICIES].\n\nGenerate 12–15 real questions customers ask, grouped into sections (Getting Started, Billing, Features, Troubleshooting, Account). Each answer: clear, 2–4 sentences, friendly, and complete enough to deflect a support ticket. Flag any answer where I need to fill in a specific detail with [PLACEHOLDER]."
+  },
+  {
+    "id": "negotiation-prep",
+    "title": "Negotiation Prep & Scripts",
+    "category": "Business",
+    "subcategory": "Communication",
+    "author": "PromptDeck",
+    "description": "Prepares you for a negotiation with your leverage, targets, BATNA, and word-for-word scripts.",
+    "tags": [
+      "business",
+      "negotiation",
+      "communication"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Help me prepare for a negotiation.\n\nSituation: [WHAT I'M NEGOTIATING — salary, contract, price, etc.]\nMy goal: [TARGET]  |  The other side: [WHO & WHAT THEY LIKELY WANT]\n\nDeliver: my likely leverage, a target / walk-away / opening anchor, my BATNA, 3 concessions I can trade cheaply, likely objections with responses, and word-for-word scripts for the opening ask and for holding firm politely. Keep it collaborative, not combative."
+  },
+  {
+    "id": "job-description-writer",
+    "title": "Inclusive Job Description Writer",
+    "category": "Business",
+    "subcategory": "HR",
+    "author": "PromptDeck",
+    "description": "Writes a compelling, inclusive job description that attracts strong candidates and screens for fit.",
+    "tags": [
+      "hr",
+      "recruiting",
+      "job-description"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a job description for a [ROLE] at [COMPANY], which does [WHAT].\n\nInclude: an engaging intro about the company and mission, what the role does day-to-day, must-have vs. nice-to-have requirements (keep the list realistic, not a wish-list), what success looks like in 90 days, and what we offer. Use inclusive, bias-free language and avoid unnecessary jargon or degree requirements that gatekeep. End with a clear, low-friction application step."
+  },
+  {
+    "id": "prompt-improver",
+    "title": "Improve My Prompt (Meta-Prompt)",
+    "category": "Generative AI",
+    "subcategory": "Prompting",
+    "author": "PromptDeck",
+    "description": "Takes a rough prompt and rewrites it into a clear, structured, high-performing prompt with variables.",
+    "tags": [
+      "generative-ai",
+      "prompting",
+      "meta"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude",
+      "o3"
+    ],
+    "prompt": "Act as a prompt engineer. Improve the prompt below so it produces better, more reliable results.\n\nMy rough prompt:\n[PASTE PROMPT]\n\nDo this:\n1. Point out what's vague or missing.\n2. Rewrite it with: a clear role, specific task, context, constraints, output format, and [FILL-IN VARIABLES].\n3. Give a short 'why this is better' note.\n4. Suggest one optional advanced version (with examples or step-by-step reasoning) if it would help.\n\nKeep the rewritten prompt copy-paste ready."
+  },
+  {
+    "id": "system-prompt-builder",
+    "title": "Custom GPT / Assistant System Prompt",
+    "category": "Generative AI",
+    "subcategory": "Prompting",
+    "author": "PromptDeck",
+    "description": "Designs a robust system prompt for a custom GPT, chatbot, or AI assistant with guardrails.",
+    "tags": [
+      "generative-ai",
+      "system-prompt",
+      "chatbot"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a system prompt for an AI assistant that does: [PURPOSE].\n\nAudience/users: [WHO]  |  Personality/tone: [HOW IT SHOULD SOUND]\nMust always: [KEY BEHAVIORS]  |  Must never: [GUARDRAILS]\n\nDeliver a complete system prompt covering: role & goal, tone, step-by-step behavior, output format, how to handle unknowns or out-of-scope requests, and safety guardrails. Make it specific and unambiguous. Then list 3 test messages I can use to check it behaves correctly."
+  },
+  {
+    "id": "dalle-image-prompt",
+    "title": "AI Image Prompt (DALL·E / SD)",
+    "category": "Generative AI",
+    "subcategory": "Image",
+    "author": "PromptDeck",
+    "description": "Writes detailed image-generation prompts for DALL·E or Stable Diffusion, with a negative-prompt.",
+    "tags": [
+      "generative-ai",
+      "image",
+      "dalle"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write image-generation prompts for the concept: [CONCEPT].\n\nTarget tool: [DALL·E / STABLE DIFFUSION / etc.]\nUse case: [LOGO / HERO IMAGE / ILLUSTRATION / etc.]\n\nDeliver 3 prompt variations. Each specifies: subject, composition, style/medium, lighting, color, mood, and detail level in natural but rich language. For Stable Diffusion also include a suggested negative prompt and sensible settings. Keep them ready to paste."
+  },
+  {
+    "id": "seo-meta-tags",
+    "title": "SEO Title Tags & Meta Descriptions (Bulk)",
+    "category": "SEO",
+    "subcategory": "On-Page",
+    "author": "PromptDeck",
+    "description": "Generates optimized title tags and meta descriptions for a list of pages or keywords.",
+    "tags": [
+      "seo",
+      "meta",
+      "on-page"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write SEO title tags and meta descriptions for these pages/keywords:\n[LIST PAGES OR KEYWORDS]\n\nBrand: [BRAND]\n\nFor each: a title tag (max 60 chars, keyword near the front, includes brand where it fits) and a meta description (max 155 chars, benefit-led, with a soft CTA and the keyword used naturally). Output as a table: Page/Keyword | Title Tag | Meta Description. Avoid duplicate phrasing across rows."
+  },
+  {
+    "id": "content-repurpose",
+    "title": "Repurpose One Piece Into Ten",
+    "category": "Marketing",
+    "subcategory": "Content",
+    "author": "PromptDeck",
+    "description": "Turns a single blog post, video, or transcript into a full multi-channel content package.",
+    "tags": [
+      "marketing",
+      "repurpose",
+      "content"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Repurpose the content below into a multi-channel package for [BRAND/AUDIENCE].\n\nProduce:\n- 1 LinkedIn post\n- 1 X/Twitter thread (6–8 tweets)\n- 3 short-form video hooks + a 20s script for one\n- 1 Instagram carousel outline (slide text)\n- 1 email newsletter blurb\n- 5 quote graphics (pull quotes)\n- 3 SEO title ideas for a spin-off article\n\nKeep each adapted to its platform (not copy-paste). Voice: [VOICE].\n\nSOURCE CONTENT:\n[PASTE BLOG/TRANSCRIPT]"
+  },
+  {
+    "id": "grammar-editor",
+    "title": "Proofread & Line-Edit",
+    "category": "Copywriting",
+    "subcategory": "Editing",
+    "author": "PromptDeck",
+    "description": "Fixes grammar and clarity, tightens prose, and shows what changed and why.",
+    "tags": [
+      "copywriting",
+      "editing",
+      "proofreading"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Proofread and line-edit the text below.\n\nGoals: fix grammar, spelling, and punctuation; tighten wordy sentences; improve clarity and flow. Keep my voice and meaning intact. Target reading level: [LEVEL]. Variant of English: [US / UK].\n\nOutput:\n1. The clean, edited version.\n2. A short bullet list of the most important changes and why.\n\nDon't over-formalize — keep it natural.\n\nTEXT:\n[PASTE TEXT]"
+  },
+  {
+    "id": "story-generator",
+    "title": "Short Story / Narrative Generator",
+    "category": "Copywriting",
+    "subcategory": "Creative",
+    "author": "PromptDeck",
+    "description": "Writes an engaging short story from your premise with strong structure, character, and a satisfying end.",
+    "tags": [
+      "creative",
+      "writing",
+      "story"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a short story.\n\nGenre: [GENRE]  |  Premise: [PREMISE]  |  Main character: [WHO]  |  Setting: [WHERE/WHEN]  |  Tone: [TONE]  |  Length: about [WORDS] words.\n\nUse a clear arc (hook, rising tension, turn, resolution), show-don't-tell, vivid but efficient description, and natural dialogue. Give the protagonist a want and an obstacle. End with a line that lands. Avoid clichés and purple prose."
+  },
+  {
+    "id": "elevator-pitch",
+    "title": "60-Second Elevator Pitch",
+    "category": "Business",
+    "subcategory": "Positioning",
+    "author": "PromptDeck",
+    "description": "Crafts a memorable spoken elevator pitch plus a 10-second and tweet-length version.",
+    "tags": [
+      "business",
+      "pitch",
+      "positioning"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write an elevator pitch for [PERSON/COMPANY/PRODUCT].\n\nWhat we do: [WHAT]  |  For whom: [WHO]  |  The problem: [PROBLEM]  |  Why us: [DIFFERENTIATOR]  |  Goal of the pitch: [INVESTMENT / CUSTOMERS / JOB].\n\nDeliver three versions: a 10-second one-liner, a tweet-length version, and a 60-second spoken pitch with a hook, the problem, the solution, proof, and a clear ask. Conversational and confident — written to be said out loud, not read."
+  },
+  {
+    "id": "apology-email",
+    "title": "Sincere Apology / Service Recovery Email",
+    "category": "Customer Support",
+    "subcategory": "Email",
+    "author": "PromptDeck",
+    "description": "Writes a genuine apology email after a mistake or outage that rebuilds trust and states next steps.",
+    "tags": [
+      "support",
+      "apology",
+      "trust"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write an apology email to customers after: [WHAT WENT WRONG — outage, error, delay, etc.].\n\nInclude: a clear, non-defensive acknowledgement of what happened and the impact, a sincere apology, what caused it (briefly and honestly), what we're doing to fix it and prevent recurrence, and any goodwill gesture [OPTIONAL]. Voice: [VOICE]. Avoid corporate deflection or 'we take this seriously' clichés. Under 180 words, human and accountable."
+  },
+  {
+    "id": "okrs-generator",
+    "title": "Quarterly OKRs Generator",
+    "category": "Business",
+    "subcategory": "Operations",
+    "author": "PromptDeck",
+    "description": "Turns a goal into well-formed Objectives and measurable Key Results for the team or company.",
+    "tags": [
+      "business",
+      "okr",
+      "goals"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Act as an operations lead. Create quarterly OKRs for [TEAM/COMPANY] whose main goal this quarter is: [GOAL].\n\nDeliver 2–3 Objectives (qualitative, inspiring, time-bound) each with 3 measurable Key Results (numeric, outcome-based — not tasks). Make KRs ambitious but realistic, and ensure they'd actually indicate the objective is met. Then list 3 initiatives that would drive these OKRs and one anti-pattern to avoid. Keep it tight."
+  },
+  {
+    "id": "review-response",
+    "title": "Respond to Online Reviews",
+    "category": "Customer Support",
+    "subcategory": "Reputation",
+    "author": "PromptDeck",
+    "description": "Writes professional, on-brand replies to positive and negative public reviews.",
+    "tags": [
+      "support",
+      "reviews",
+      "reputation"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Write a public reply to this online review for [BUSINESS]. Brand voice: [VOICE].\n\nReview (rating [X]/5):\n[PASTE REVIEW]\n\nIf positive: thank them specifically, reinforce what they loved, invite them back — no generic copy-paste.\nIf negative: stay calm and professional, acknowledge their experience, avoid excuses or arguing publicly, and move the resolution offline with a contact. Keep it short, sincere, and mindful that future customers are reading."
+  },
+  {
+    "id": "explain-to-audience",
+    "title": "Rewrite for a Specific Audience",
+    "category": "Copywriting",
+    "subcategory": "Editing",
+    "author": "PromptDeck",
+    "description": "Rewrites technical or complex text for a specific audience and reading level without losing accuracy.",
+    "tags": [
+      "copywriting",
+      "editing",
+      "audience"
+    ],
+    "models": [
+      "GPT-4o",
+      "Claude"
+    ],
+    "prompt": "Rewrite the text below for this audience: [AUDIENCE, e.g. non-technical executives, 5th graders, developers].\n\nKeep it accurate, but adjust vocabulary, examples, and level of detail to fit them. Target reading level: [LEVEL]. Length: [ABOUT SAME / SHORTER]. Add an analogy if it aids understanding. Flag anything you had to simplify that loses nuance.\n\nTEXT:\n[PASTE TEXT]"
+  }
+]
