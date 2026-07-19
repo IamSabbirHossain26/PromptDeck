@@ -52,7 +52,17 @@ tab to see changes.
 
 **Built and working now:**
 - ✅ Marketing site + pricing
-- ✅ 79 curated, variable-driven prompts across 13 categories
+- ✅ 504 curated prompts across 15 categories, all in RTF (Role–Task–Format) structure
+- ✅ Freemius checkout wired on the pricing page (set env keys to go live — see below)
+
+### Freemius payments setup
+
+1. Create a free account at [freemius.com](https://freemius.com) → add a product (type: SaaS) → create a $10/mo plan
+2. Copy `web/.env.local.example` → `web/.env.local` and fill in:
+   - `NEXT_PUBLIC_FREEMIUS_PRODUCT_ID` and `NEXT_PUBLIC_FREEMIUS_PUBLIC_KEY` (Settings → Keys)
+   - `FREEMIUS_SECRET_KEY` (server-side, for webhook verification)
+3. In the Freemius dashboard, point the webhook to `https://YOUR-DOMAIN/api/freemius/webhook`
+4. The "Get Pro" button then opens the Freemius checkout overlay; until keys are set it falls back to a contact link
 - ✅ Searchable/filterable library with copy & preview
 - ✅ Public prompt API
 - ✅ Chrome extension that injects prompts into ChatGPT **and** Claude
