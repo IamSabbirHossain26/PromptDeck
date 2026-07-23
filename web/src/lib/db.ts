@@ -31,7 +31,8 @@ export function getPool(): Pool | null {
     ssl: useSsl ? { rejectUnauthorized: false } : undefined,
     max: 5,
     idleTimeoutMillis: 30_000,
-    connectionTimeoutMillis: 10_000,
+    // Fail fast if the DB is unreachable so pages fall back quickly.
+    connectionTimeoutMillis: 5_000,
   });
 
   global.__pdPool.on("error", (err) => {

@@ -33,22 +33,44 @@ function slugify(s: string): string {
     .slice(0, 60);
 }
 
+function sortedFallback(): Prompt[] {
+  return [...fallbackPrompts].sort((a, b) => a.title.localeCompare(b.title));
+}
+
 export async function listPrompts(): Promise<Prompt[]> {
   const pool = getPool();
-  if (!pool) {
-    return [...fallbackPrompts].sort((a, b) => a.title.localeCompare(b.title));
+  if (!pool) return sortedFallback();
+  try {
+    const { rows } = await pool.query("SELECT * FROM prompts ORDER BY title ASC");
+    // A configured-but-empty DB (not seeded yet) still uses the bundled set so
+    // the site is never blank.
+    return rows.length ? rows.map(rowToPrompt) : sortedFallback();
+  } catch (e) {
+    // DB unreachable / table missing / auth failure — keep the site up on the
+    // bundled library instead of crashing the page.
+    console.error(
+      "[prompts-repo] DB read failed, using bundled fallback:",
+      e instanceof Error ? e.message : e
+    );
+    return sortedFallback();
   }
-  const { rows } = await pool.query(
-    "SELECT * FROM prompts ORDER BY title ASC"
-  );
-  return rows.map(rowToPrompt);
 }
 
 export async function getPromptById(id: string): Promise<Prompt | null> {
   const pool = getPool();
   if (!pool) return fallbackPrompts.find((p) => p.id === id) ?? null;
-  const { rows } = await pool.query("SELECT * FROM prompts WHERE id = $1", [id]);
-  return rows[0] ? rowToPrompt(rows[0]) : null;
+  try {
+    const { rows } = await pool.query("SELECT * FROM prompts WHERE id = $1", [id]);
+    return rows[0]
+      ? rowToPrompt(rows[0])
+      : (fallbackPrompts.find((p) => p.id === id) ?? null);
+  } catch (e) {
+    console.error(
+      "[prompts-repo] DB read failed, using bundled fallback:",
+      e instanceof Error ? e.message : e
+    );
+    return fallbackPrompts.find((p) => p.id === id) ?? null;
+  }
 }
 
 export async function createPrompt(input: PromptInput): Promise<Prompt> {
